@@ -1,29 +1,51 @@
 package com.ufjf.TrabalhoDoisOO.entities;
 
-import com.ufjf.TrabalhoDoisOO.entities.Pessoa;
+public class Aluno {
 
-import java.util.ArrayList;
-import java.util.List;
+    private Long id;
+    private String nome;
+    private String matricula;
+    private String curso;
 
-public class Aluno extends Pessoa {
-    private static int proximaMatricula = 1000;
-    private int matricula;
-    private List<Nota> notas = new ArrayList<>();
-
-    public Aluno(String nome, String cpf) {
-        super(nome, cpf);
-        this.matricula = proximaMatricula++;
+    public Aluno() {
     }
 
-    public int getMatricula() {
+    public Aluno(Long id, String nome, String matricula, String curso) {
+        this.id = id;
+        this.nome = nome;
+        this.matricula = matricula;
+        this.curso = curso;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getMatricula() {
         return matricula;
     }
 
-    public List<Nota> getNotas() {
-        return notas;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
-    public void adicionarNota(Nota nota) {
-        notas.add(nota);
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 }
